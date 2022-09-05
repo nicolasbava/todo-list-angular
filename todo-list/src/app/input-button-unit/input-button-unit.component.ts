@@ -8,9 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class InputButtonUnitComponent implements OnInit {
   title: string = 'Input title'
 
-  changeTitle(newTitle: string): string {  
+  changeTitle(inputRef): string {  
   
-   return this.title = newTitle
+   return this.title = inputRef
   }
 
   // method generate title
