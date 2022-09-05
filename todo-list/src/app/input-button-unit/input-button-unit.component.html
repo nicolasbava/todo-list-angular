@@ -1,1 +1,8 @@
-<p> {{ title }} input-button-unit works!</p>
+El titulo es {{ title }} <br><br>
+<input  #inputRef
+        [value]="generateTitle()" 
+        (keydown.enter)="changeTitle($event.target.value)">
+
+        <br><br>
+<button (click)="changeTitle(inputRef.value)">Save</button><br><br>
+{{ generateTitle() }}
