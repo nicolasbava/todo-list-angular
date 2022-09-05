@@ -1,8 +1,9 @@
 <h1> {{ title }} app is running!!</h1>
-<app-input-button-unit></app-input-button-unit>
+
+<app-input-button-unit (submit)="addItem($event)"></app-input-button-unit>
 
 <ul>
   <li *ngFor="let item of todoList">
-  <app-todo-item [item]="item"></app-todo-item>
-</li>
+    <app-todo-item [item]="item"></app-todo-item>
+  </li>
 </ul>

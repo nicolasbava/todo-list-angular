@@ -10,7 +10,7 @@ export class TodoItemComponent implements OnInit {
 
   constructor() { }
 
-  @Input() item: TodoItemItem;
+  @Input() item: TodoItem;
 
   ngOnInit(): void {
   }

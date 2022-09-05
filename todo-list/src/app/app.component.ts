@@ -8,9 +8,16 @@ import { TodoItem } from './interfaces/todo-item';
 })
 export class AppComponent {
   title = 'todo-list';
+
+
   todoList: TodoItem[] = [
     {title: 'Instalar Node.js'},
     {title: 'servir Angular'},
     {title: 'testear js'}
-  ]
+  ];
+
+
+  addItem(title: string){
+    return this.todoList.push( { title: title } )
+  }
 }

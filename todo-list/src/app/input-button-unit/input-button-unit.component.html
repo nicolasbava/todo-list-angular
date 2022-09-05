@@ -1,9 +1,9 @@
-El titulo es {{ title }} <br><br>
+
 <input  #inputRef
-        [value]="generateTitle()" 
-        (keydown.enter)="changeTitle(inputRef.value)">
+        [value]="title" 
+        (keydown.enter)="submitValue($event.target.value)">
 
         <br><br>
-<button (click)="changeTitle(inputRef.value)">Save</button><br><br>
+<button (click)="submitValue(inputRef.value)">Save</button><br><br>
 
 
