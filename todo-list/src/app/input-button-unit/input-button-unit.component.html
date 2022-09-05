@@ -1,9 +1,11 @@
 
-<input  #inputRef
+<input  class="todo-input"
+        
+        #inputRef
         [value]="title" 
         (keydown.enter)="submitValue($event.target.value)">
 
         <br><br>
-<button (click)="submitValue(inputRef.value)">Save</button><br><br>
+<button class="btn" (click)="submitValue(inputRef.value)">Save</button><br><br>
 
 
