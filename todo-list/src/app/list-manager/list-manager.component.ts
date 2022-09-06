@@ -25,4 +25,9 @@ export class ListManagerComponent implements OnInit {
   addItem(title: string): void {    
     this.todoListService.addItem( { title } );
   }
+
+  // action function method that removes the item passed from the child component
+  removeItem(item): void {
+    this.todoListService.deleteItem(item)
+  }
 }
