@@ -5,14 +5,18 @@
     line-height: 30px;
     display: flex;
     justify-content: space-between;
-  }
+}
   
-  .todo-checkbox {
+.todo-checkbox {
     flex-shrink: 0;
     margin: auto 1ex auto 0;
-  }
-  
-  .todo-title {
+}
+
+.todo-title {
     flex-grow: 1;
     padding-left: 11px;
-  }
+}
+
+.todo-completed {
+    text-decoration: line-through;
+}

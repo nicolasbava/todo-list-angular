@@ -8,15 +8,15 @@ import { TodoListService } from '../services/todo-list.service';
   styleUrls: ['./list-manager.component.css']
 })
 export class ListManagerComponent implements OnInit {
-  todoListService: TodoListService;
   
   todoList: TodoItem[];
-  constructor(todoListService: TodoListService) { 
-    this.todoListService = todoListService
-  }
+  // todoListService: TodoListService;
+  // constructor(todoListService: TodoListService) { 
+  //   this.todoListService = todoListService
+  // }
 
   // is the same as below
-  // constructor(private todoListService: TodoListService) { }
+  constructor(private todoListService: TodoListService) { }
 
   ngOnInit(): void {
     this.todoList = this.todoListService.getTodoList()
@@ -29,5 +29,9 @@ export class ListManagerComponent implements OnInit {
   // action function method that removes the item passed from the child component
   removeItem(item): void {
     this.todoListService.deleteItem(item)
+  }
+
+  updateItem(item, changes): void {
+    this.todoListService.updateItem(item, changes);
   }
 }
